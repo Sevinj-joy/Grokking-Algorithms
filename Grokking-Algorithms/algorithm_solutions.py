@@ -58,3 +58,44 @@ print(find_phone_book(phone_book,name_to_find))
 
 name_to_find = "Eve"
 print(find_phone_book(phone_book,name_to_find))
+
+
+#1.4 - Answer
+def find_name_by_phone_number(phone_book, phone_number):
+    
+    for name, number in phone_book.items():  # Fix: use 'number' instead of 'phone_number' in the loop
+        if number == phone_number:
+            return f"The phone number {phone_number} belongs to {name}."
+    return f"Sorry, the phone number {phone_number} is not in the phone book."
+
+
+# Example usage
+phone_book = {
+    "Alice": "123-456-7890",
+    "Bob": "987-654-3210",
+    "Charlie": "555-555-5555"
+}
+
+# Test Cases
+phone_number_to_find = "987-654-3210"
+print(find_name_by_phone_number(phone_book, phone_number_to_find))
+phone_number_to_find = "111-222-3333"
+print(find_name_by_phone_number(phone_book, phone_number_to_find))
+
+#1.5 - Answer
+
+def list_all_numbers(phone_book):
+    return list(phone_book.values())
+
+#Example
+phone_book = {
+    "Alice": "123-456-7890",
+    "Bob": "987-654-3210",
+    "Charlie": "555-555-5555"
+}
+
+all_numbers = list_all_numbers(phone_book)
+print("All phone numbers in the phone book:")
+for number in all_numbers:
+    print(number)
+
