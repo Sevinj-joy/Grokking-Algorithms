@@ -99,3 +99,20 @@ print("All phone numbers in the phone book:")
 for number in all_numbers:
     print(number)
 
+#1.6
+
+def list_numbers_of_A(phone_book):
+    numbers_of_A = [number for name, number in phone_book.items() if name.startswith("A")]
+    return numbers_of_A
+
+phone_book = {
+    "Alice": "123-456-7890",
+    "Bob": "987-654-3210",
+    "Charlie": "555-555-5555",
+    "Angela": "111-222-3333",
+}
+numbers_of_A = list_numbers_of_A(phone_book)
+print("The phone numbers of people whose names start with 'A' in the phonebook:")
+
+for number in numbers_of_A:
+    print(number)
